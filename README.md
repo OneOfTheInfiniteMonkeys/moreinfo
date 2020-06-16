@@ -72,3 +72,5 @@ moreinfo will output a table when the command line parameter -l is used :
 </table>
 
 
+### Why moreinfo?
+With many Raspberry Pi's deployed, it becomes challenging to identify the age of a specifc piece of hardware. With so many models and variations it can be difficult to recall the board revisions. moreinfo updates enable legacy Raspberry Pi hardware management.
