@@ -12,20 +12,19 @@ Debian - Raspberry PI
 ### Installation
 Clone the repository to your Raspberry Pi  
 e.g.  
- cd ~  
- sudo git clone https://github.com/OneOfTheInfiniteMonkeys/moreinfo.git  
+&nbsp;&nbsp; cd ~  
+&nbsp;&nbsp; sudo git clone https://github.com/OneOfTheInfiniteMonkeys/moreinfo.git  
 
 
 ### Running
 A folder will have been created in your home directory (if you used the cd ~ command).  
 Change to the installation folder :  
-  cd ./moreinfo  
+&nbsp;&nbsp; cd ./moreinfo  
 Run the script :  
-  sudo bash mi.sh  
+&nbsp;&nbsp; sudo bash mi.sh  
 
 ### Typical Output
-d03114  Q2 2020 4 Model B       1.4     8 GB    (Mfg by Sony)  
-
+d03114 &nbsp;Q2 2020 4 Model B &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.4 &nbsp;&nbsp;&nbsp;8 GB &nbsp;&nbsp;&nbsp;(Mfg by Sony)  
 
 ### Options
 moreinfo supports the following command line parameters :  
@@ -64,12 +63,12 @@ The information reported is based on the 'Device code' identifier.
 ### Table Output Example  
 moreinfo will output a table when the command line parameter -l is used :  
 <table>
-  <tr><td> Rel. Date      </td><td> : Q2 2020 </td></tr>
-  <tr><td> Rel. Model     </td><td> : 4 Model B </td></tr>
-  <tr><td> Rel. PCB Rev   </td><td> : 1.4 </td></tr>
-  <tr><td> Rel. Mem       </td><td> : 8 GB </td></tr>
-  <tr><td> Rel. Manf.     </td><td> : (Mfg by Sony) </td></tr>
-  <tr><td> Rel. Voltage   </td><td> : Clear </td></tr>
+  <tr><td> Rel. Date      </td><td> Q2 2020 </td></tr>
+  <tr><td> Rel. Model     </td><td> 4 Model B </td></tr>
+  <tr><td> Rel. PCB Rev   </td><td> 1.4 </td></tr>
+  <tr><td> Rel. Mem       </td><td> 8 GB </td></tr>
+  <tr><td> Rel. Manf.     </td><td> (Mfg by Sony) </td></tr>
+  <tr><td> Rel. Voltage   </td><td> Clear </td></tr>
 </table>
 
 
