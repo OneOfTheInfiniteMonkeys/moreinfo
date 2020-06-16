@@ -1,7 +1,7 @@
 #!/bin/bash
 #---------><--------><--------><--------><--------><--------><--------><-------->
 # Author            : OneOfTheInfinteMonkeys
-# Revision          : 1.0
+# Revision          : 1.01
 # Date              : 14 June 2020
 # License           : MIT
 #-------------------:
@@ -16,7 +16,7 @@
 # Requires          : raspi-boards.txt in the same folder as this script
 #--------------------------------------------------------------------------------
 #
-readonly App_version="01.00"                                                     # App version
+readonly App_version="01.01"                                                     # App version
 readonly App_date="2020-06-14"                                                   # App release date
 readonly App_time="00:00:00"                                                     # App release time
 readonly App_Name="More-Info"                                                    # Default application name
@@ -200,10 +200,10 @@ if [[ $cmd_table = "y" ]] || [[ $cmd_limited = "y" ]] ; then                    
     printf "Rel. Model      : ${Rod}\n"
     printf "Rel. PCB Rev    : ${RRv}\n"
     printf "Rel. Mem        : ${Rmm}\n"
-    printf "Rel. Name       : ${Rmn}\n"
+    printf "Rel. Manf,      : ${Rmn}\n"
     printf "Rel. Voltage    : ${Rfv}\n"
   fi
-
+  
 else                                                                            # not a table output section
 
   if [[ $cmd_notabs = "n" ]] ; then
