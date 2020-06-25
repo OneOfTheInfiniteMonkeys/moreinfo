@@ -1,23 +1,27 @@
 #!/bin/bash
-#---------><--------><--------><--------><--------><--------><--------><-------->
-# Author            : OneOfTheInfinteMonkeys
-# Revision          : 1.01
-# Date              : 14 June 2020
-# License           : MIT
-#-------------------:
-# Comments          : Recover Raspberry Pi board version and return additional release information
-#                   : Additional information is manufacturer and date of manufacture etc.
-#                   : Default output returned is a string with tabs
-#                   :
-#                   : The supporting reference file 'raspi-boards.txt' has the following format:
-#                   : Revision<T>Release Date<T>Model<T>PCB Revision<T>Memory<T>Manufacturer
-#                   : An optional table ouptut format can be selected
-#-------------------:
-# Requires          : raspi-boards.txt in the same folder as this script
+#--------><--------><--------><--------><--------><--------><--------><-------->
+# Author           : OneOfTheInfinteMonkeys
+# Revision         : 1.1
+# Date             : 26 June 2020
+# License          : MIT
+#------------------:
+# Comments         : Recover Raspberry Pi board version and return additional release information
+#                  : Additional information is manufacturer and date of manufacture etc.
+#                  : Default output returned is a string with tabs
+#                  :
+#                  : The supporting reference file 'raspi-boards.txt' has the following format:
+#                  : Revision<T>Release Date<T>Model<T>PCB Revision<T>Memory<T>Manufacturer
+#                  : An optional table ouptut format can be selected
+# Comments         :
+#                  : Original source location :
+#                  : https://github.com/OneOfTheInfiniteMonkeys/moreinfo
+#                  :
+#------------------:
+# Requires         : raspi-boards.txt in the same folder as this script
 #--------------------------------------------------------------------------------
 #
-readonly App_version="01.01"                                                     # App version
-readonly App_date="2020-06-14"                                                   # App release date
+readonly App_version="01.1"                                                      # App version
+readonly App_date="2020-06-26"                                                   # App release date
 readonly App_time="00:00:00"                                                     # App release time
 readonly App_Name="More-Info"                                                    # Default application name
 
