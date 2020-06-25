@@ -10,15 +10,14 @@ Provides information about Raspberry Pi hardware from the device hardware id, in
 ### Target platform
 Debian - Raspberry PI
 
-### Installation
+### Installation (or update)
 Clone the repository to your Raspberry Pi  
 e.g.  
 &nbsp;&nbsp; cd ~  
 &nbsp;&nbsp; sudo git clone https://github.com/OneOfTheInfiniteMonkeys/moreinfo.git  
 
-
 ### Running
-A folder will have been created in your home directory (if you used the cd ~ command).  
+Following installation a folder will have been created in your home directory (if you used the cd ~ command).  
 Change to the installation folder :  
 &nbsp;&nbsp; cd ./moreinfo  
 Run the script :  
@@ -47,7 +46,7 @@ moreinfo supports the following command line parameters :
 </table>
   
 ### Ouptut Explanation  
-The typical output  
+The typical output:  
 d03114&nbsp;  Q2 2020 4 Model B &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.4 &nbsp;&nbsp;&nbsp;&nbsp;8 GB &nbsp;&nbsp;&nbsp;(Mfg by Sony)  
 
 consists of the following :  
@@ -60,7 +59,6 @@ Manufacturer e.g. (Mfg by Sony)
 
 The information reported is based on the 'Device code' identifier.
 
-
 ### Table Output Example  
 moreinfo will output a table when the command line parameter -l is used :  
 <table>
@@ -71,7 +69,6 @@ moreinfo will output a table when the command line parameter -l is used :
   <tr><td> Rel. Manf.     </td><td> (Mfg by Sony) </td></tr>
   <tr><td> Rel. Voltage   </td><td> Clear </td></tr>
 </table>
-
 
 ### Why moreinfo?
 With many Raspberry Pi's deployed, it becomes challenging to identify the age of a specifc piece of hardware. With so many models and variations it can be difficult to recall the board revisions. moreinfo updates enable legacy Raspberry Pi hardware management.
