@@ -1,5 +1,8 @@
 # moreinfo
-Provides information about Raspberry Pi hardware from the device hardware id, including manufacturer, release date and board revision
+Provides information about Raspberry Pi hardware from the device hardware id, including manufacturer, release date and board revision.
+
+### Why moreinfo?
+With many Raspberry Pi's deployed, it becomes challenging to identify the age of a specifc piece of hardware. With so many models and variations it can be difficult to recall the board revisions. moreinfo updates enable legacy Raspberry Pi hardware management.
 
 ![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/OneOfTheInfiniteMonkeys/moreinfo?include_prereleases)
 ![GitHub](https://img.shields.io/github/license/OneOftheinfinitemonkeys/moreinfo)
@@ -34,7 +37,7 @@ moreinfo supports the following command line parameters :
   <tr><td>  -e, --everything  </td><td> Output all information, equivalent to -t -l  </td></tr>
   <tr><td>  -l, --limited     </td><td> Ouptut ${App_Name} data in table format only  </td></tr>
   <tr><td>                    </td><td> Includes status of Over Voltage setting, which is recorded against the version number  </td></tr>
-  <tr><td>  -nt, --notabs     </td><td> Single line output (i.e. exclude tables) has no tabs in the output string  </td></tr>
+  <tr><td>  -nt, --notabs     </td><td> Single line output ( i.e. exclude tables ) has no tabs in the output string  </td></tr>
   <tr><td>  -t, --table       </td><td> Ouptut a formatted table of source data. Equivalent to 'cat /proc/cpuinfo  </td></tr>
 </table>
 
@@ -42,7 +45,7 @@ moreinfo supports the following command line parameters :
 <table>
   <tr><td>-h, --help, -?     </td><td> Displays this help and exits </td></tr>
   <tr><td>-v, --versio n     </td><td> Displays version information for ${App_Name} and exits </td></tr>
-  <tr><td>                   </td><td> <Application Name> <Command> <Revision> (<Date {yyyy-mm-dd} {hh:mm}>) </td></tr>
+  <tr><td>                   </td><td> < Application Name > < Command > < Revision > ( < Date {yyyy-mm-dd} {hh:mm} > ) </td></tr>
 </table>
   
 ### Ouptut Explanation  
@@ -69,6 +72,3 @@ moreinfo will output a table when the command line parameter -l is used :
   <tr><td> Rel. Manf.     </td><td> (Mfg by Sony) </td></tr>
   <tr><td> Rel. Voltage   </td><td> Clear </td></tr>
 </table>
-
-### Why moreinfo?
-With many Raspberry Pi's deployed, it becomes challenging to identify the age of a specifc piece of hardware. With so many models and variations it can be difficult to recall the board revisions. moreinfo updates enable legacy Raspberry Pi hardware management.
