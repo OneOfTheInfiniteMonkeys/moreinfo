@@ -44,26 +44,28 @@ moreinfo supports the following command line parameters :
 ### Commands
 <table>
   <tr><td>-h, --help, -?     </td><td> Displays this help and exits </td></tr>
-  <tr><td>-v, --versio n     </td><td> Displays version information for ${App_Name} and exits </td></tr>
+  <tr><td>-v, --version      </td><td> Displays version information for ${App_Name} and exits </td></tr>
   <tr><td>                   </td><td> < Application Name > < Command > < Revision > ( < Date {yyyy-mm-dd} {hh:mm} > ) </td></tr>
 </table>
   
-### Ouptut Explanation  
-The typical output:  
+### Output Explanation  
+A typical output from moreinfo is shown below for a Raspberry Pi Model 4 B with 8Gb of memory:  
 d03114&nbsp;  Q2 2020 4 Model B &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.4 &nbsp;&nbsp;&nbsp;&nbsp;8 GB &nbsp;&nbsp;&nbsp;(Mfg by Sony)  
 
-consists of the following :  
-Device code e.g. d03114  
-Release date e.g. Q2 2020  
-Model e.g. 4 Model B  
-Board version e.g. 1.4  
-Memory size e.g. 8 GB  
-Manufacturer e.g. (Mfg by Sony)  
-
+The line consists of the following information :
+<table>
+  <tr><td> Device code   </td><td> d03114         </td></tr>
+  <tr><td> Release date  </td><td> Q2 2020        </td></tr>
+  <tr><td> Model         </td><td> 4 Model B      </td></tr>
+  <tr><td> Board version </td><td> 1.4            </td></tr>
+  <tr><td> Memory size   </td><td> 8 GB           </td></tr>
+  <tr><td> Manufacturer  </td><td> (Mfg by Sony)  </td></tr>
+</table>
+    
 The information reported is based on the 'Device code' identifier.
 
-### Table Output Example  
-moreinfo will output a table when the command line parameter -l is used :  
+### Table Output Example:  
+moreinfo will output a table when the command line optional parameter -l is used :  
 <table>
   <tr><td> Rel. Date      </td><td> Q2 2020 </td></tr>
   <tr><td> Rel. Model     </td><td> 4 Model B </td></tr>
@@ -72,3 +74,9 @@ moreinfo will output a table when the command line parameter -l is used :
   <tr><td> Rel. Manf.     </td><td> (Mfg by Sony) </td></tr>
   <tr><td> Rel. Voltage   </td><td> Clear </td></tr>
 </table>
+
+
+
+
+### Note
+Trademarks are owned by thier respective holders. No affiliation or association is, or should be inferred. Information provided is for indication only.
