@@ -1,8 +1,8 @@
 #!/bin/bash
 #--------><--------><--------><--------><--------><--------><--------><-------->
 # Author           : OneOfTheInfinteMonkeys
-# Revision         : 1.1
-# Date             : 26 June 2020
+# Revision         : 1.2
+# Date             : 18 July 2020
 # License          : MIT
 #------------------:
 # Comments         : Recover Raspberry Pi board version and return additional release information
@@ -20,8 +20,8 @@
 # Requires         : raspi-boards.txt in the same folder as this script
 #--------------------------------------------------------------------------------
 #
-readonly App_version="01.1"                                                      # App version
-readonly App_date="2020-06-26"                                                   # App release date
+readonly App_version="01.2"                                                      # App version
+readonly App_date="2020-07-18"                                                   # App release date
 readonly App_time="00:00:00"                                                     # App release time
 readonly App_Name="More-Info"                                                    # Default application name
 
@@ -110,7 +110,7 @@ else
      ResStatus="0"
 fi
 
-if [[ $ResStatus = "0" ]] && [[$cmd_additional = "y"] ; then
+if [[ $ResStatus = "0" ]] && [[$cmd_additional = "y"]] ; then
      printf "\r"
      printf " - Installed BASH version is not compatible with this script.\n"
      printf " - Ensure running on Raspbian Buster with BASH ${req_bashversion}\n"
