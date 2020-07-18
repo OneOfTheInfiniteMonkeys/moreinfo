@@ -74,9 +74,11 @@ moreinfo will output a table when the command line optional parameter -l is used
   <tr><td> Rel. Manf.     </td><td> (Mfg by Sony) </td></tr>
   <tr><td> Rel. Voltage   </td><td> Clear </td></tr>
 </table>
-
-
-
-
+  
+  
+  
+  
 ### Note
-Trademarks are owned by thier respective holders. No affiliation or association is, or should be inferred. Information provided is for indication only.
+Trademarks are owned by thier respective holders.  
+No affiliation or association is implied or should be inferred with any organisation.  
+Information provided is for indication only.
