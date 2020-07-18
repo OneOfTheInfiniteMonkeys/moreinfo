@@ -65,15 +65,15 @@ while [[ $# -gt 0 ]]; do
             cmd_table="y"
             ;;
         -v|--version)
-            printf "${App_Name} ${PROG} ${App_version} (${App_date} ${App_time})\n"
+            printf "%s %s %s ( %s %s ) \n" "$App_Name" "$PROG" "$App_version" "$App_date" "$App_time"
             exit 0
             ;;
         -h|--help|-?)
-            printf " Usage: ${PROG} [OPTION...] [COMMAND]...\n"
+            printf " Usage: %s [OPTION...] [COMMAND]...\n"  "$PROG"
             printf " Options:\n"
             printf "   -a, --additional       Output additional information\n"
             printf "   -e, --everything       Output all information, equivalent to -t -l\n"
-            printf "   -l, --limited          Ouptut ${App_Name} data in table format only\n"
+            printf "   -l, --limited          Ouptut %s data in table format only\n" "$App_Name"
             printf "                          Includes status of Over Voltage setting, which is recorded against the version number\n"
             printf "   -nt, --notabs          Single line output (i.e. exclude tables) has no tabs in the output string\n"
             printf "   -t, --table            Ouptut a formatted table of source data. Equivalent to 'cat /proc/cpuinfo'\n"
@@ -82,8 +82,8 @@ while [[ $# -gt 0 ]]; do
             printf "   -v, --version          Displays version information for ${App_Name} and exits\n"
             printf "                          <Application Name> <Command> <Revision> (<Date {yyyy-mm-dd} {hh:mm}>)\n"
             printf " Examples:\n"
-            printf "   $PROG -h \n"
-            printf "   $PROG -a \n"
+            printf "    %s -h \n" "$PROG"
+            printf "    %s -a \n" "$PROG"
             printf "\n"
             exit 0
             ;;
@@ -113,14 +113,14 @@ fi
 if [[ $ResStatus = "0" ]] && [[ $cmd_additional = "y" ]] ; then
      printf "\r"
      printf " - Installed BASH version is not compatible with this script.\n"
-     printf " - Ensure running on Raspbian Buster with BASH ${req_bashversion}\n"
+     printf " - Ensure running on Raspbian Buster with BASH %s \n" $req_bashversion
      printf "\n"
      printf "  Script execution terminated.\n"
      exit 1
 elif [[ $cmd_additional = "y" ]]; then
      printf "\r"
 #           "012345678901234567890123456789"
-     printf " - Detected BASH Version     : ${bashversion}\n"
+     printf " - Detected BASH Version     : %s\n" "$bashversion"
 fi
 #---------------------------------------
 
@@ -151,7 +151,7 @@ if [[ $ResStatus = "0" ]] && [[ $cmd_additional = "y" ]] ; then
 elif [[ $cmd_additional = "y" ]] ; then
      printf "\r" 
 #           "012345678901234567890123456789"
-     printf " - Debian O.S. version       : ${osversion}\n"
+     printf " - Debian O.S. version       : %s\n" "$osversion"
 fi
 #---------------------------------------
 
@@ -160,7 +160,7 @@ board_str=$(cat /proc/cpuinfo | grep 'Revision' | awk '{print $3}')             
 
 if [[ $cmd_additional = "y" ]]; then                                            # If additional information requested ouput source Revision string
 #        "012345678901234567890123456789"
-  printf " - Raw Revision string       : ${board_str}\n"
+  printf " - Raw Revision string       : %s\n" "$board_str"
 fi
 
 board_mfv=$(printf '%s' "${board_str}" | grep -c '^1000')                       # returns 0 for warranty string clear and 1 for warranty string detected - note numberboard_str="10009000c1"
@@ -170,7 +170,7 @@ board_info=$(grep $board_revision raspi-boards.txt)
 
 if [[ $cmd_additional = "y" ]]; then                                            # If additional information requested ouput source Revision string
 #        "012345678901234567890123456789"
-  printf " - Raw boards string         : ${board_info}\n"
+  printf " - Raw boards string         : %s\n" "$board_info"
 fi
 
 Rfd=$(printf '%s' "${board_info}" | awk 'BEGIN{ FS=OFS="\t" } {print $2}')
@@ -200,20 +200,20 @@ if [[ $cmd_table = "y" ]] || [[ $cmd_limited = "y" ]] ; then                    
   fi
 
   if [[ $cmd_limited = "y" ]] ; then                                            # -t set so output all data including local data
-    printf "Rel. Date       : ${Rfd}\n"
-    printf "Rel. Model      : ${Rod}\n"
-    printf "Rel. PCB Rev    : ${RRv}\n"
-    printf "Rel. Mem        : ${Rmm}\n"
-    printf "Rel. Manf,      : ${Rmn}\n"
-    printf "Rel. Voltage    : ${Rfv}\n"
+    printf "Rel. Date       : %s\n" "$Rfd"
+    printf "Rel. Model      : %s\n" "$Rod"
+    printf "Rel. PCB Rev    : %s\n" "$RRv"
+    printf "Rel. Mem        : %s\n" "$Rmm"
+    printf "Rel. Manf,      : %s\n" "$Rmn"
+    printf "Rel. Voltage    : %s\n" "$Rfv"
   fi
   
 else                                                                            # not a table output section
 
   if [[ $cmd_notabs = "n" ]] ; then
-    printf "${board_info}\n"                                                    # Standard single line outputis the default
+    printf "%s\n" "$board_info"                                                 # Standard single line outputis the default 
   else
-    printf "${board_info//$'\t'/ }\n"                                           # Standard single line output - with no tabs in it
+    printf "%s\n" "${board_info//$'\t'/ }"                                      # Standard single line output - with no tabs in it
   fi
 
-fi                                                                              # End of output formatting
+fi  
