@@ -79,7 +79,7 @@ while [[ $# -gt 0 ]]; do
             printf "   -t, --table            Ouptut a formatted table of source data. Equivalent to 'cat /proc/cpuinfo'\n"
             printf " Commands:\n"
             printf "   -h, --help, -?         Displays this help and exits\n"
-            printf "   -v, --version          Displays version information for ${App_Name} and exits\n"
+            printf "   -v, --version          Displays version information for %s and exits\n"  "${App_Name}"
             printf "                          <Application Name> <Command> <Revision> (<Date {yyyy-mm-dd} {hh:mm}>)\n"
             printf " Examples:\n"
             printf "    %s -h \n" "$PROG"
@@ -113,7 +113,7 @@ fi
 if [[ $ResStatus = "0" ]] && [[ $cmd_additional = "y" ]] ; then
      printf "\r"
      printf " - Installed BASH version is not compatible with this script.\n"
-     printf " - Ensure running on Raspbian Buster with BASH %s \n" $req_bashversion
+     printf " - Ensure running on Raspbian Buster with BASH %s \n" "$req_bashversion"
      printf "\n"
      printf "  Script execution terminated.\n"
      exit 1
@@ -143,7 +143,7 @@ fi
 
 if [[ $ResStatus = "0" ]] && [[ $cmd_additional = "y" ]] ; then
      printf "\r" 
-     printf " - Installation requires Debian version ${req_osversion} minimum.\n"
+     printf " - Installation requires Debian version %s minimum.\n" "$req_osversion"
      printf " - Upgrade or install compatible operating system.\n"
      printf "\n"
      printf " - Script execution terminated.\n"
@@ -156,7 +156,7 @@ fi
 #---------------------------------------
 
 
-board_str=$(cat /proc/cpuinfo | grep 'Revision' | awk '{print $3}')             # Expects a string in the form 'Revision        : 9000c1'
+board_str=$(grep 'Revision' <  /proc/cpuinfo | awk '{print $3}')                # Expects a string in the form 'Revision        : 9000c1'
 
 if [[ $cmd_additional = "y" ]]; then                                            # If additional information requested ouput source Revision string
 #        "012345678901234567890123456789"
@@ -166,7 +166,7 @@ fi
 board_mfv=$(printf '%s' "${board_str}" | grep -c '^1000')                       # returns 0 for warranty string clear and 1 for warranty string detected - note numberboard_str="10009000c1"
 
 board_revision=${board_str##"1000"}                                             # remove any over voltage indication text
-board_info=$(grep $board_revision raspi-boards.txt)
+board_info=$(grep ''$board_revision'' raspi-boards.txt)
 
 if [[ $cmd_additional = "y" ]]; then                                            # If additional information requested ouput source Revision string
 #        "012345678901234567890123456789"
@@ -216,4 +216,4 @@ else                                                                            
     printf "%s\n" "${board_info//$'\t'/ }"                                      # Standard single line output - with no tabs in it
   fi
 
-fi  
+fi                                                                              # End of output formatting
