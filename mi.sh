@@ -166,7 +166,7 @@ fi
 board_mfv=$(printf '%s' "${board_str}" | grep -c '^1000')                       # returns 0 for warranty string clear and 1 for warranty string detected - note numberboard_str="10009000c1"
 
 board_revision=${board_str##"1000"}                                             # remove any over voltage indication text
-board_info=$(grep ${board_revision} raspi-boards.txt)
+board_info=$(grep "$board_revision" raspi-boards.txt)
 
 if [[ $cmd_additional = "y" ]]; then                                            # If additional information requested ouput source Revision string
 #        "012345678901234567890123456789"
