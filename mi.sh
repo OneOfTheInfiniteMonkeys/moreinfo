@@ -110,7 +110,7 @@ else
      ResStatus="0"
 fi
 
-if [[ $ResStatus = "0" ]] && [[$cmd_additional = "y"]] ; then
+if [[ $ResStatus = "0" ]] && [[ $cmd_additional = "y" ]] ; then
      printf "\r"
      printf " - Installed BASH version is not compatible with this script.\n"
      printf " - Ensure running on Raspbian Buster with BASH ${req_bashversion}\n"
