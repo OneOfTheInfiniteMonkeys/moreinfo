@@ -81,6 +81,6 @@ moreinfo will output a table when the command line optional parameter -l is used
   
   
 ### Note
-Trademarks are owned by thier respective holders.  
+Trademarks are owned by their respective holders.  
 No affiliation or association is implied or should be inferred with any organisation.  
 Information provided is for indication only.
