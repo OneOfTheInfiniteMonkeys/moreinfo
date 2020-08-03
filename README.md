@@ -2,7 +2,7 @@
 Provides information about Raspberry Pi hardware from the device hardware id, including manufacturer, release date and board revision.
 
 ### Why moreinfo?
-With numerous Raspberry Pi models and variations deployed it's challenging to understand the maturity of deployed hardware. <strong>moreinfo</strong> provides additional information such as the harware designs release date to permit improved management oflegacy Raspberry Pi hardware.
+With numerous Raspberry Pi models and variations deployed it's challenging to understand the maturity of deployed hardware. <strong>moreinfo</strong> provides additional information such as the harware designs release date to permit improved management of legacy Raspberry Pi hardware.
 
 ![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/OneOfTheInfiniteMonkeys/moreinfo?include_prereleases)
 [![Build Status](https://travis-ci.org/OneOfTheInfiniteMonkeys/moreinfo.svg?branch=master)](https://travis-ci.org/OneOfTheInfiniteMonkeys/moreinfo)
@@ -22,8 +22,9 @@ e.g.
 &nbsp;&nbsp; sudo git clone https://github.com/OneOfTheInfiniteMonkeys/moreinfo.git  
 
 ### Running
-Following installation a folder will have been created in your home directory (if you used the cd ~ command).  
-Change to the installation folder :  
+Following installation using the steps detailed in the <strong>Installation section</strong>, a folder will have been created in your home directory which contains the <strong>moreinfo</strong> BASH script.  
+
+To run <strong>moreinfo</strong> script enter the following commands:
 &nbsp;&nbsp; cd ./moreinfo  
 Run the script :  
 &nbsp;&nbsp; sudo bash mi.sh  
@@ -78,9 +79,17 @@ moreinfo will output a table when the command line optional parameter -l is used
 </table>
   
   
-  
-  
 ### Note
+<strong>moreinfo</strong> can be placed in any folder, the functional elements of the software comprise the files:   
+&nbsp;&nbsp; mi.sh   
+&nbsp;&nbsp; raspi-boards.txt   
+  
+Alternatives to moving or copying the scripts files are possibly:   
+&nbsp;&nbsp; Create a <a href="https://wiki.debian.org/SymLink" target="moreinfo-symbolic_link">symbolic link</a> to the <strong>moreinfo</strong> script.   
+&nbsp;&nbsp;&nbsp;&nbsp; or   
+&nbsp;&nbsp; Place the location of <strong>moreinfo</strong> in the <a href="https://wiki.debian.org/path" target="moreinfo-path">PATH</a> by editing the <strong>.profile</strong> file in the users home directoy.   
+
+### Trademarks, Affiliations, Information Provenance
 Trademarks are owned by their respective holders.  
 No affiliation or association is implied or should be inferred with any organisation.  
-Information provided is for indication only.
+Information is provided for <strong>Indication Only</strong>.
