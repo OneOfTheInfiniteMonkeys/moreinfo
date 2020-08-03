@@ -85,9 +85,9 @@ moreinfo will output a table when the command line optional parameter -l is used
 &nbsp;&nbsp; raspi-boards.txt   
   
 Alternatives to moving or copying the scripts files are possibly:   
-&nbsp;&nbsp; Create a <a href="https://wiki.debian.org/SymLink" target="moreinfo-symbolic_link">symbolic link</a> to the <strong>moreinfo</strong> script.   
+&nbsp;&nbsp; Create <a href="https://wiki.debian.org/SymLink" target="misl">symbolic links</a> to the <strong>moreinfo</strong> script mi.sh and raspi-boards.txt file.   
 &nbsp;&nbsp;&nbsp;&nbsp; or   
-&nbsp;&nbsp; Place the location of <strong>moreinfo</strong> in the <a href="https://wiki.debian.org/path" target="moreinfo-path">PATH</a> by editing the <strong>.profile</strong> file in the users home directoy.   
+&nbsp;&nbsp; Place the location of <strong>moreinfo</strong> in the <a href="https://wiki.debian.org/path" target=mipa">PATH</a> by editing the <strong>.profile</strong> file in the users home directoy.   
 
 ### Trademarks, Affiliations, Information Provenance
 Trademarks are owned by their respective holders.  
