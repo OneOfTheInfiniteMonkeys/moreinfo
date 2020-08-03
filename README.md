@@ -2,7 +2,7 @@
 Provides information about Raspberry Pi hardware from the device hardware id, including manufacturer, release date and board revision.
 
 ### Why moreinfo?
-With numerous Raspberry Pi models and variations deployed it's challenging to understand the maturity of deployed hardware. <strong>moreinfo</strong> provides additional information such as the harware designs release date to permit improved legacy Raspberry Pi hardware management.
+With numerous Raspberry Pi models and variations deployed it's challenging to understand the maturity of deployed hardware. <strong>moreinfo</strong> provides additional information such as the harware designs release date to permit improved management oflegacy Raspberry Pi hardware.
 
 ![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/OneOfTheInfiniteMonkeys/moreinfo?include_prereleases)
 [![Build Status](https://travis-ci.org/OneOfTheInfiniteMonkeys/moreinfo.svg?branch=master)](https://travis-ci.org/OneOfTheInfiniteMonkeys/moreinfo)
