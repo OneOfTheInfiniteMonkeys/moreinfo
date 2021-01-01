@@ -1,7 +1,7 @@
 #--------><--------><--------><--------><--------><--------><--------><-------->
 # Author           : OneOfTheInfinteMonkeys
-# Revision         : 1.4
-# Date             : 16 Nov 2020
+# Revision         : 1.5
+# Date             : 01 Jan 2021
 # Licence          : Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
 #------------------:
 # Comments         :
@@ -16,6 +16,9 @@
 #                  :
 #------------------:
 # Revisions        :
+#                  : 1.5
+#                  : Updated with Q4 2020 boards
+#                  :
 #                  : 1.4
 #                  : Updated with latest Pi 400 board
 #                  : Amended Sony manufacturing locations to explicitly state UK
@@ -69,7 +72,10 @@ a22082	Q1 2016	3 Model B	1.2	1 GB	(Mfg by Embest)
 a32082	Q4 2016	3 Model B	1.2	1 GB	(Mfg by Sony Japan)
 a52082 	3B 2016?  3 Model B 1.2 1GB Stadium
 b03111	Q2 2019	4 Model B	1.1	2 GB	(Mfg by Sony UK)
+b03112	Q4 2020	4 Model B	1.1	2 GB	(Mfg by Sony UK)
+b03114	Q4 2020	4 Model B	1.4	2 GB	(Mfg by Sony UK)
 c03111	Q2 2019	4 Model B	1.1	4 GB	(Mfg by Sony UK)
-c03112	Q2 2020	4 Model B	1.2	4 GB	(Mfg by Sony UK)
+c03112	Q4 2020	4 Model B	1.2	4 GB	(Mfg by Sony UK)
+c03114  Q4 2020 4 Model B 1.4 4 GB  (Mfg by Sony UK)
 c03130  Q4 2020 Pi 400  1.0 4 GB   (Mfg by Sony UK)
 d03114	Q2 2020	4 Model B	1.4	8 GB	(Mfg by Sony UK)
