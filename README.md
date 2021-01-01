@@ -38,7 +38,7 @@ moreinfo supports the following command line parameters :
 <table>
   <tr><td>  -a, --additional  </td><td> Output additional information  </td></tr>
   <tr><td>  -e, --everything  </td><td> Output all information, equivalent to -t -l  </td></tr>
-  <tr><td>  -l, --limited     </td><td> Ouptut ${App_Name} data in table format only  </td></tr>
+  <tr><td>  -l, --limited     </td><td> Ouptut More-Info data in table format only  </td></tr>
   <tr><td>                    </td><td> Includes status of Over Voltage setting, which is recorded against the version number  </td></tr>
   <tr><td>  -nt, --notabs     </td><td> Single line output ( i.e. exclude tables ) has no tabs in the output string  </td></tr>
   <tr><td>  -t, --table       </td><td> Ouptut a formatted table of source data. Equivalent to 'cat /proc/cpuinfo  </td></tr>
