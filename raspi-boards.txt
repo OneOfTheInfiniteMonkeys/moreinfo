@@ -1,6 +1,6 @@
 #--------><--------><--------><--------><--------><--------><--------><-------->
 # Author           : OneOfTheInfinteMonkeys
-# Revision         : 1.5
+# Revision         : 1.6
 # Date             : 01 Jan 2021
 # Licence          : Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
 #------------------:
@@ -16,6 +16,9 @@
 #                  :
 #------------------:
 # Revisions        :
+#                  : 1.6
+#                  : Amended boards file outside of github as github editor ignores TAB character
+#                  :
 #                  : 1.5
 #                  : Updated with Q4 2020 boards file
 #                  :
@@ -76,6 +79,6 @@ b03112	Q4 2020	4 Model B	1.1	2 GB	(Mfg by Sony UK)
 b03114	Q4 2020	4 Model B	1.4	2 GB	(Mfg by Sony UK)
 c03111	Q2 2019	4 Model B	1.1	4 GB	(Mfg by Sony UK)
 c03112	Q4 2020	4 Model B	1.2	4 GB	(Mfg by Sony UK)
-c03114  Q4 2020 4 Model B 1.4 4 GB  (Mfg by Sony)
-c03130  Q4 2020 Pi 400  1.0 4 GB  (Mfg by Sony UK)
+c03114  Q4 2020	4 Model B	1.4	4 GB	(Mfg by Sony UK)
+c03130  Q4 2020	Pi 400	1.0	4 GB	(Mfg by Sony UK)
 d03114	Q2 2020	4 Model B	1.4	8 GB	(Mfg by Sony UK)
