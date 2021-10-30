@@ -22,7 +22,7 @@
 #
 readonly App_version="01.2"                                                      # App version
 readonly App_date="2020-07-18"                                                   # App release date
-readonly App_time="00:00:00"                                                     # App release time
+readonly App_time="00:00"                                                        # App release time
 readonly App_Name="More-Info"                                                    # Default application name
 
 #---------------------------------------
