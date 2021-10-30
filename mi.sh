@@ -187,6 +187,20 @@ else
 fi
 
 #---------------------------------------
+# Get Quarter Start in Day Month format
+#---------------------------------------
+Rda="01 Jan"
+if [[ "$Rfd" == *"Q1"* ]]; then Rda="01 Jan"; fi
+if [[ "$Rfd" == *"Q2"* ]]; then Rda="01 Apr"; fi
+if [[ "$Rfd" == *"Q3"* ]]; then Rda="01 Jul"; fi
+if [[ "$Rfd" == *"Q4"* ]]; then Rda="01 Oct"; fi
+
+Rdy=${Rfd:2:7}                                                                 # Extract manufactured year date
+Rmd="$Rda$Rdy"                                                                 # Construct string of dd mmm yyyy format
+LC_ALL=en_GB.utf8 Ndy=$(( ($(date +%s) - $(date --date="$Rmd" +%s)) / (86400)  )) # Force UK / English format for this part
+
+
+#---------------------------------------
 # Ouptuts
 #---------------------------------------
 # formatted table outputs
@@ -206,6 +220,7 @@ if [[ $cmd_table = "y" ]] || [[ $cmd_limited = "y" ]] ; then                    
     printf "Rel. Mem        : %s\n" "$Rmm"
     printf "Rel. Manf,      : %s\n" "$Rmn"
     printf "Rel. Voltage    : %s\n" "$Rfv"
+    printf "Rel. Age (days) : %s\n" "$Ndy"
   fi
   
 else                                                                            # not a table output section
