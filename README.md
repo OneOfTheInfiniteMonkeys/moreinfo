@@ -2,7 +2,7 @@
 Provides information about Raspberry Pi hardware from the device hardware id, including manufacturer, release date and board revision. The script identifies over 50 of the variants available covering a manufacturing period commencing in 2012.
 
 ### Why moreinfo?
-With numerous Raspberry Pi models and variations deployed it's challenging to understand the maturity of deployed hardware. <strong>moreinfo</strong> provides additional information such as the harware designs release date to permit improved management of legacy Raspberry Pi hardware.
+With numerous Raspberry Pi models and variations deployed it's challenging to understand the maturity of deployed hardware. <strong>moreinfo</strong> provides additional information such as the harware designs, age in days, and release date to permit improved management of legacy Raspberry Pi hardware.
 
 ![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/OneOfTheInfiniteMonkeys/moreinfo?include_prereleases)
 [![Build Status](https://travis-ci.com/OneOfTheInfiniteMonkeys/moreinfo.svg?branch=master)](https://travis-ci.com/OneOfTheInfiniteMonkeys/moreinfo)
@@ -78,12 +78,13 @@ The information reported is based on the 'Device code' identifier.
 ### Table Output Example:  
 moreinfo will output a table when the command line optional parameter -l is used :  
 <table>
-  <tr><td> Rel. Date      </td><td> Q2 2020 </td></tr>
-  <tr><td> Rel. Model     </td><td> 4 Model B </td></tr>
-  <tr><td> Rel. PCB Rev   </td><td> 1.4 </td></tr>
-  <tr><td> Rel. Mem       </td><td> 8 GB </td></tr>
-  <tr><td> Rel. Manf.     </td><td> (Mfg by Sony) </td></tr>
-  <tr><td> Rel. Voltage   </td><td> Clear </td></tr>
+  <tr><td> Rel. Date       </td><td> Q2 2020 </td></tr>
+  <tr><td> Rel. Model      </td><td> 4 Model B </td></tr>
+  <tr><td> Rel. PCB Rev    </td><td> 1.4 </td></tr>
+  <tr><td> Rel. Mem        </td><td> 8 GB </td></tr>
+  <tr><td> Rel. Manf.      </td><td> (Mfg by Sony) </td></tr>
+  <tr><td> Rel. Voltage    </td><td> Clear </td></tr>
+  <tr><td> Rel. Age (Days) </td><td> 29 </td></tr>
 </table>
   
   
