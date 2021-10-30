@@ -2,7 +2,7 @@
 #--------><--------><--------><--------><--------><--------><--------><-------->
 # Author           : OneOfTheInfinteMonkeys
 # Revision         : 1.2
-# Date             : 18 July 2020
+# Date             : 30 Oct 2021
 # License          : MIT
 #------------------:
 # Comments         : Recover Raspberry Pi board version and return additional release information
@@ -20,8 +20,8 @@
 # Requires         : raspi-boards.txt in the same folder as this script
 #--------------------------------------------------------------------------------
 #
-readonly App_version="01.2"                                                      # App version
-readonly App_date="2020-07-18"                                                   # App release date
+readonly App_version="01.3"                                                      # App version
+readonly App_date="2020-10-30"                                                   # App release date
 readonly App_time="00:00"                                                        # App release time
 readonly App_Name="More-Info"                                                    # Default application name
 
