@@ -1,7 +1,7 @@
 #!/bin/bash
 #--------><--------><--------><--------><--------><--------><--------><-------->
 # Author           : OneOfTheInfinteMonkeys
-# Revision         : 1.2
+# Revision         : 1.3
 # Date             : 30 Oct 2021
 # License          : MIT
 #------------------:
