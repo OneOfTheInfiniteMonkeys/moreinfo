@@ -16,6 +16,9 @@ With numerous Raspberry Pi models and variations deployed it's challenging to un
 Debian - Raspberry PI
 
 ### Installation (or update)
+If you don't have GIT installed, install with:
+sudo apt install git
+
 Clone the repository to your Raspberry Pi  
 e.g.  
 &nbsp;&nbsp; cd ~  
@@ -23,7 +26,7 @@ e.g.
 
 ### Running
 Following installation using the steps detailed in the <strong>Installation section</strong>, a folder will have been created in your home directory which contains the <strong>moreinfo</strong> BASH script.  
-
+y
 To run <strong>moreinfo</strong> script enter the following commands:
 &nbsp;&nbsp; cd ./moreinfo  
 Run the script :  
