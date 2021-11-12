@@ -1,6 +1,8 @@
 # moreinfo
 Provides information about Raspberry Pi hardware from the device hardware id, including manufacturer, release date and board revision. The script identifies over 50 of the variants available covering a manufacturing period commencing in 2012.
 
+( Age-In-Days branch is piloting approximate age in days feature, useage bash mi.sh -l )
+
 ### Why moreinfo?
 With numerous Raspberry Pi models and variations deployed it's challenging to understand the maturity of deployed hardware. <strong>moreinfo</strong> provides additional information such as the harware designs release date to permit improved management of legacy Raspberry Pi hardware.
 
