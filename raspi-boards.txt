@@ -88,7 +88,7 @@ a220a0	Q1 2021	Compute Module 1.0	1 GB	(Mfg by Embest)
 a32082	Q4 2016	3 Model B	1.2	1 GB	(Mfg by Sony Japan)
 a52082	3B 2016?  3 Model B 1.2 1GB Stadium
 b03111	Q2 2019	4 Model B	1.1	2 GB	(Mfg by Sony UK)
-b03112	Q4 2020	4 Model B	1.1	2 GB	(Mfg by Sony UK)
+b03112	Q4 2020	4 Model B	1.2	2 GB	(Mfg by Sony UK)
 b03114	Q4 2020	4 Model B	1.4	2 GB	(Mfg by Sony UK)
 c03111	Q2 2019	4 Model B	1.1	4 GB	(Mfg by Sony UK)
 c03112	Q4 2020	4 Model B	1.2	4 GB	(Mfg by Sony UK)
