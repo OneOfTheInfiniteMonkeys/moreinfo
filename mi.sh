@@ -1,8 +1,8 @@
 #!/bin/bash
 #--------><--------><--------><--------><--------><--------><--------><-------->
 # Author           : OneOfTheInfinteMonkeys
-# Revision         : 1.3
-# Date             : 30 Oct 2021
+# Revision         : 1.4
+# Date             : 22 Jan 2022
 # License          : MIT
 #------------------:
 # Comments         : Recover Raspberry Pi board version and return additional release information
@@ -20,17 +20,16 @@
 # Requires         : raspi-boards.txt in the same folder as this script
 #--------------------------------------------------------------------------------
 #
-readonly App_version="01.3"                                                      # App version
-readonly App_date="2020-10-30"                                                   # App release date
-readonly App_time="00:00"                                                        # App release time
-readonly App_Name="More-Info"                                                    # Default application name
+App_version="01.4"                                                      # App version
+App_date="2020-01-22"                                                   # App release date
+App_time="00:00"                                                        # App release time
+App_Name="More-Info"                                                    # Default application name
 
 #---------------------------------------
 # Requirements for tests performed in the script
 #---------------------------------------
-readonly req_bashversion=4                        # Equal or greater than      - expressed as a version
-readonly req_userlevel=1000                       # Equal to                   - expressed as a user level
-readonly req_osversion=10                         # Equal or greater than      - expressed as a version
+req_bashversion=4                        # Equal or greater than      - expressed as a version
+req_osversion=10                         # Equal or greater than      - expressed as a version
 
 #---------------------------------------
 # Set defaults for any Command Line Parameters
