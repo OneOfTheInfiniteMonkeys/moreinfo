@@ -81,7 +81,7 @@ while [[ $# -gt 0 ]]; do
             printf " Usage: %s [OPTION...] [COMMAND]...\n"  "$PROG"
             printf " Options:\n"
             printf "   -a, --additional       Output additional information\n"
-            printf "   -cv,--checkversion     Check the local version against the Githib version" 
+            printf "   -cv,--checkversion     Check the local version against the Github version" 
             printf "   -e, --everything       Output all information, equivalent to -t -l\n"
             printf "   -l, --limited          Output %s data in table format only\n" "$App_Name"
             printf "                          Includes status of Over Voltage setting, which is recorded against the version number\n"
