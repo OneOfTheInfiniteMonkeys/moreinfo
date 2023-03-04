@@ -1,8 +1,8 @@
 #!/bin/bash
 #--------><--------><--------><--------><--------><--------><--------><-------->
 # Author           : OneOfTheInfinteMonkeys
-# Revision         : 1.4
-# Date             : 22 Jan 2021
+# Revision         : 1.5
+# Date             : 04 Mar 2023
 # License          : MIT
 #------------------:
 # Comments         : Recover Raspberry Pi board version and return additional release information
@@ -11,7 +11,7 @@
 #                  :
 #                  : The supporting reference file 'raspi-boards.txt' has the following format:
 #                  : Revision<T>Release Date<T>Model<T>PCB Revision<T>Memory<T>Manufacturer
-#                  : An optional table ouptut format can be selected
+#                  : An optional table output format can be selected
 # Comments         :
 #                  : Original source location :
 #                  : https://github.com/OneOfTheInfiniteMonkeys/moreinfo
@@ -20,8 +20,8 @@
 # Requires         : raspi-boards.txt in the same folder as this script
 #--------------------------------------------------------------------------------
 #
-App_version="01.4"                                                      # App version
-App_date="2022-01-22"                                                   # App release date
+App_version="1.5"                                                       # App version
+App_date="2023-03-04"                                                   # App release date
 App_time="00:00"                                                        # App release time
 App_Name="More-Info"                                                    # Default application name
 
@@ -35,20 +35,30 @@ req_osversion=10                         # Equal or greater than      - expresse
 # Set defaults for any Command Line Parameters
 #---------------------------------------
 cmd_additional="n"                                # Don't output additional detection information
-cmd_table="n"                                     # Don't output a formaated text table of results
-cmd_limited="n"                                   # Don't output a limtied list of resutls from More Information
+cmd_table="n"                                     # Don't output a formatted text table of results
+cmd_limited="n"                                   # Don't output a limited list of results from More Information
 cmd_notabs="n"                                    # Don't remove tabs from output string
 
 #---------------------------------------
 # Process Command Line Parameters
 #---------------------------------------
 PROG=${0##*/}                                     # Get script name to reporting in help as script may be adapted for other installs
-# Now see if a cry for 'help' was issued giving it absolute priority, even if other paramters were passed
+# Now see if a cry for 'help' was issued giving it absolute priority, even if other parameters were passed
 while [[ $# -gt 0 ]]; do
     case "$1" in
          -a|--additional)
             printf " - Additional information will be output during running\n"
             cmd_additional="y"
+            ;;
+         -cv|--checkversion)
+            # Check version released on Github
+            printf "%s version : %s\n" "$App_Name" "$App_version"
+            printf "Searching git... \r"
+            Git_Ver=$(curl -s https://api.github.com/repos/OneOfTheInfiniteMonkeys/moreinfo/releases/latest | grep 'tag_name' | cut -d\" -f4)
+            printf "Latest Release    : %s\n" "$Git_Ver"
+            printf "\n"
+            printf "git cloned installations, use git pull to update from the repository.\n"
+            exit 0
             ;;
          -e|--everything)
             cmd_limited="y"
@@ -71,11 +81,12 @@ while [[ $# -gt 0 ]]; do
             printf " Usage: %s [OPTION...] [COMMAND]...\n"  "$PROG"
             printf " Options:\n"
             printf "   -a, --additional       Output additional information\n"
+            printf "   -cv,--checkversion     Check the local version against the Githib version" 
             printf "   -e, --everything       Output all information, equivalent to -t -l\n"
-            printf "   -l, --limited          Ouptut %s data in table format only\n" "$App_Name"
+            printf "   -l, --limited          Output %s data in table format only\n" "$App_Name"
             printf "                          Includes status of Over Voltage setting, which is recorded against the version number\n"
             printf "   -nt, --notabs          Single line output (i.e. exclude tables) has no tabs in the output string\n"
-            printf "   -t, --table            Ouptut a formatted table of source data. Equivalent to 'cat /proc/cpuinfo'\n"
+            printf "   -t, --table            Output a formatted table of source data. Equivalent to 'cat /proc/cpuinfo'\n"
             printf " Commands:\n"
             printf "   -h, --help, -?         Displays this help and exits\n"
             printf "   -v, --version          Displays version information for %s and exits\n"  "${App_Name}"
@@ -157,7 +168,7 @@ fi
 
 board_str=$(grep 'Revision' <  /proc/cpuinfo | awk '{print $3}')                # Expects a string in the form 'Revision        : 9000c1'
 
-if [[ $cmd_additional = "y" ]]; then                                            # If additional information requested ouput source Revision string
+if [[ $cmd_additional = "y" ]]; then                                            # If additional information requested output source Revision string
 #        "012345678901234567890123456789"
   printf " - Raw Revision string       : %s\n" "$board_str"
 fi
@@ -167,7 +178,7 @@ board_mfv=$(printf '%s' "${board_str}" | grep -c '^1000')                       
 board_revision=${board_str##"1000"}                                             # remove any over voltage indication text
 board_info=$(grep "$board_revision" raspi-boards.txt)
 
-if [[ $cmd_additional = "y" ]]; then                                            # If additional information requested ouput source Revision string
+if [[ $cmd_additional = "y" ]]; then                                            # If additional information requested output source Revision string
 #        "012345678901234567890123456789"
   printf " - Raw boards string         : %s\n" "$board_info"
 fi
@@ -179,14 +190,14 @@ Rmm=$(printf '%s' "${board_info}" | awk 'BEGIN{ FS=OFS="\t" } {print $5}')
 Rmn=$(printf '%s' "${board_info}" | awk 'BEGIN{ FS=OFS="\t" } {print $6}')
 
 Rfv="Unknown"                                                                   # Default condition of over voltage indication
-if [[ $board_mfv = 0 ]] ; then                                                  # Set string for reporting assesment of over voltage (over clocking) warranty
+if [[ $board_mfv = 0 ]] ; then                                                  # Set string for reporting assessment of over voltage (over clocking) warranty
   Rfv="Clear"
 else
   Rfv="Set"
 fi
 
 #---------------------------------------
-# Ouptuts
+# Outputs
 #---------------------------------------
 # formatted table outputs
 
@@ -210,7 +221,7 @@ if [[ $cmd_table = "y" ]] || [[ $cmd_limited = "y" ]] ; then                    
 else                                                                            # not a table output section
 
   if [[ $cmd_notabs = "n" ]] ; then
-    printf "%s\n" "$board_info"                                                 # Standard single line outputis the default 
+    printf "%s\n" "$board_info"                                                 # Standard single line output is the default 
   else
     printf "%s\n" "${board_info//$'\t'/ }"                                      # Standard single line output - with no tabs in it
   fi
