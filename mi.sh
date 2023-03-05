@@ -51,7 +51,7 @@ while [[ $# -gt 0 ]]; do
             cmd_additional="y"
             ;;
          -cv|--checkversion)
-            # Check version released on Github
+            # Check version released on Github - Also show local version
             printf "%s version : %s\n" "$App_Name" "$App_version"
             printf "Searching git... \r"
             Git_Ver=$(curl -s https://api.github.com/repos/OneOfTheInfiniteMonkeys/moreinfo/releases/latest | grep 'tag_name' | cut -d\" -f4)
