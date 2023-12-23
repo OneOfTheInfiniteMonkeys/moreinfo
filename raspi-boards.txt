@@ -1,8 +1,8 @@
 #--------><--------><--------><--------><--------><--------><--------><-------->
 # Author           : OneOfTheInfinteMonkeys
 # Contributor      : Max Peal
-# Revision         : 1.9
-# Date             : 12 Jan 2022
+# Revision         : 2.0
+# Date             : 23 Dec 2023
 # Licence          : Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
 #------------------:
 # Comments         :
@@ -11,13 +11,19 @@
 #                  :
 #                  : Board revisions from - http://elinux.org/RPi_HardwareHistory
 #                  : File edited by OneOfTheInfinteMonkeys for mi.sh
-#                  : Raspberry Pi version 4 8Gb model by OneOfTheInfinteMonkeys
+#                  : Raspberry Pi version 4, 8Gb model by OneOfTheInfinteMonkeys
+#                  : Raspberry Pi version 5, 4 & 8Gb model by OneOfTheInfinteMonkeys
 #                  : See also:
 #                  : https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#new-style-revision-codes-in-use
+#                  : https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/raspberry-pi/revision-codes.adoc
 #                  :
 #------------------:
 # Revisions        :
 #                  :
+#                  : 2.0
+#                  : Added model 5 boards from hardware
+#                  : Added See also reference https://github.com/raspberrypi
+#                  : 
 #                  : 1.9
 #                  : Fix for b03112 fix PCB Revision, data form http://elinux.org/RPi_HardwareHistory
 #                  :
@@ -40,8 +46,8 @@
 #                  : Amended Sony manufacturing locations to explicitly state UK
 #                  : 
 #                  : 1.3 
-#                  : Added a52082 board listed on rapsberry pi site - unconfirmed issue date
-#                  : Added 900061 board listed on rapsberry pi site - unconfirmed issue date
+#                  : Added a52082 board listed on raspberry pi site - unconfirmed issue date
+#                  : Added 900061 board listed on raspberry pi site - unconfirmed issue date
 #                  : Re-ordered boards list based on board id
 #                  :
 #------------------:
@@ -50,7 +56,7 @@
 #                  : See https://creativecommons.org/licenses/by-sa/3.0/
 #------------------------------------------------------------------------------>
 Beta	Q1 2012	B	(Beta)	?	256 MB	Beta Board
-0002	Q1 2012	B	1.0	256 MB	Unknwon
+0002	Q1 2012	B	1.0	256 MB	Unknown
 0003	Q3 2012	B	(ECN0001)	1.0	256 MB	Fuses mod and D14 removed
 0004	Q3 2012	B	2.0	256 MB	(Mfg by Sony UK)
 0005	Q4 2012	B	2.0	256 MB	(Mfg by Qisda)
@@ -103,3 +109,5 @@ a03140	Q1 2021	Compute Module 4.0	1.0	1GB	(Mfg by Sony UK)
 b03140	Q1 2021	Compute Module 4.0	1.0	2GB	(Mfg by Sony UK)
 c03140	Q1 2021	Compute Module 4.0	1.0	4GB	(Mfg by Sony UK)
 d03140	Q1 2021	Compute Module 4.0	1.0	8GB	(Mfg by Sony UK)
+c04170	Q4 2023	5 Model B	1.0	4GB	(Mfg by Sony UK)
+d04170	Q4 2023	5 Model B	1.0	8GB	(Mfg by Sony UK)
