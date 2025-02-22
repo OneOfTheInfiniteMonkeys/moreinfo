@@ -1,8 +1,8 @@
 #--------><--------><--------><--------><--------><--------><--------><-------->
 # Author           : OneOfTheInfinteMonkeys
 # Contributor      : Max Peal
-# Revision         : 2.0
-# Date             : 23 Dec 2023
+# Revision         : 2.1
+# Date             : 22 Feb 2025
 # Licence          : Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
 #------------------:
 # Comments         :
@@ -19,6 +19,9 @@
 #                  :
 #------------------:
 # Revisions        :
+#                  :
+#                  : 2.1
+#                  : Added model CM5 boards from hardware
 #                  :
 #                  : 2.0
 #                  : Added model 5 boards from hardware
@@ -111,3 +114,14 @@ c03140	Q1 2021	Compute Module 4.0	1.0	4GB	(Mfg by Sony UK)
 d03140	Q1 2021	Compute Module 4.0	1.0	8GB	(Mfg by Sony UK)
 c04170	Q4 2023	5 Model B	1.0	4GB	(Mfg by Sony UK)
 d04170	Q4 2023	5 Model B	1.0	8GB	(Mfg by Sony UK)
+b04171	Q4 2023	5 Model B 1.1	2GB	(Mfg by Sony UK)
+c04171	Q4 2023	5 Model B 1.1	4GB	(Mfg by Sony UK)
+d04171	Q4 2023	5 Model B 1.1	8GB	(Mfg by Sony UK)
+e04171	Q4 2023	5 Model B 1.1	16GB	(Mfg by Sony UK)
+b04180	Q4 2023	5 CM5 1.0	2GB	(Mfg by Sony UK)
+c04180	Q4 2023	5 CM5 1.0	4GB	(Mfg by Sony UK)
+d04180	Q4 2023	5 CM5 1.0	8GB	(Mfg by Sony UK)
+d04190	Q4 2023	500 1.0	2GB	(Mfg by Sony UK)
+b041a0	Q4 2023	CM5 Lite 1.0	2GB	(Mfg by Sony UK)
+c041a0	Q4 2023	CM5 Lite 1.0	4GB	(Mfg by Sony UK)
+d041a0	Q4 2023	CM5 Lite 1.0	8GB	(Mfg by Sony UK)
