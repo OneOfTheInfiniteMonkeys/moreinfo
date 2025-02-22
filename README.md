@@ -4,10 +4,10 @@ Provides information about Raspberry Pi hardware from the device hardware id, in
 ( Age-In-Days branch is piloting approximate age in days feature, useage bash mi.sh -l )
 
 ### Why moreinfo?
+Works across different variants of OS.  
 With numerous Raspberry Pi models and variations deployed it's challenging to understand the maturity of deployed hardware. <strong>moreinfo</strong> provides additional information such as the harware designs release date to permit improved management of legacy Raspberry Pi hardware.
 
 ![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/OneOfTheInfiniteMonkeys/moreinfo?include_prereleases)
-[![Build Status](https://travis-ci.com/OneOfTheInfiniteMonkeys/moreinfo.svg?branch=master)](https://travis-ci.com/github/OneOfTheInfiniteMonkeys/moreinfo)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/OneOfTheInfiniteMonkeys/moreinfo/graphs/commit-activity)
 ![GitHub](https://img.shields.io/github/license/OneOftheinfinitemonkeys/moreinfo)
 ![GitHub repo size](https://img.shields.io/github/repo-size/OneOfTheInfiniteMonkeys/moreinfo)
